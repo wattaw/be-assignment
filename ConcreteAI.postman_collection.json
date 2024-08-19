@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "d96fdc4d-5f07-44f3-89b1-65709415159a",
+		"name": "ConcreteAI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24104998"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\": \"user@example.com\", \"password\": \"password123\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"register"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST http://localhost:3000/register \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"email\": \"user@example.com\", \"password\": \"password123\"}'"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\": \"user@example.com\", \"password\": \"password123\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST http://localhost:3000/login \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"email\": \"user@example.com\", \"password\": \"password123\"}'"
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve Account",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer your-auth-token"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/accounts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"accounts"
+					]
+				},
+				"description": "Generated from cURL: curl -X GET http://localhost:3000/accounts \\\r\n  -H \"Authorization: Bearer your-auth-token\" \\\r\n  -H \"Content-Type: application/json\"\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve Trx",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer your-auth-token"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/transactions?accountId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"transactions"
+					],
+					"query": [
+						{
+							"key": "accountId",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X GET \"http://localhost:3000/transactions?accountId=1\" \\\r\n  -H \"Authorization: Bearer your-auth-token\" \\\r\n  -H \"Content-Type: application/json\"\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Payment Send",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 100,\r\n    \"timestamp\": \"2024-08-19T00:00:00Z\",\r\n    \"toAddress\": \"recipient@example.com\",\r\n    \"status\": \"pending\",\r\n    \"accountId\": 1\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3002/send",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"send"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST http://localhost:3002/send \\\r\n  -H \"Content-Type: application/json\" \\\r\n  -d '{\r\n    \"amount\": 100,\r\n    \"timestamp\": \"2024-08-19T00:00:00Z\",\r\n    \"toAddress\": \"recipient@example.com\",\r\n    \"status\": \"pending\",\r\n    \"accountId\": 1\r\n  }'\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Payment Withdraw",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 50,\r\n    \"timestamp\": \"2024-08-19T00:00:00Z\",\r\n    \"toAddress\": \"recipient@example.com\",\r\n    \"status\": \"pending\",\r\n    \"accountId\": 1\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3002/withdraw",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"withdraw"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST http://localhost:3002/withdraw \\\r\n  -H \"Content-Type: application/json\" \\\r\n  -d '{\r\n    \"amount\": 50,\r\n    \"timestamp\": \"2024-08-19T00:00:00Z\",\r\n    \"toAddress\": \"recipient@example.com\",\r\n    \"status\": \"pending\",\r\n    \"accountId\": 1\r\n  }'\r\n"
+			},
+			"response": []
+		}
+	]
+}

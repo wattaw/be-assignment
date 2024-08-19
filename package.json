@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "@fastify/swagger": "^8.15.0",
+    "@prisma/client": "^5.18.0",
+    "be-assignment": "file:",
+    "fastify": "^4.28.1",
+    "fastify-swagger": "^5.2.0",
+    "pg": "^8.12.0",
+    "prisma": "^5.18.0",
+    "supertokens-auth-react": "^0.45.1",
+    "supertokens-node": "^20.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.4.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  },
+  "name": "be-assignment",
+  "description": "Build 2 Backend services which manages user’s accounts and transactions (send/withdraw).",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/accountManager.js",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

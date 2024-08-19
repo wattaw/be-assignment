@@ -1,3 +1,15 @@
+/
+
+
+# Step by step run this app with docker
+- docker-compose up --build -d db
+- after db complete for migrate the db and then run : docker-compose up --build -d account-manager
+- and then run : docker-compose up --build -d payment-manager
+- use ConcreteAI.postman_collection.json curl to test with postman
+- Happy testing!
+
+
+
 # Take home assignment
 
 
